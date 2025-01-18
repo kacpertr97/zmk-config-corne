@@ -5,6 +5,7 @@
 
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 1400  // default: 600
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 20    // default: 10
+#define U_MOUSE_MOVE_EXPONENT 0
 
 #define DEF 0
 #define NAV 1
