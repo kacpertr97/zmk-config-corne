@@ -194,7 +194,7 @@
         };
 
         NAV {
-            display-name = "NavNum";
+            display-name = "Nav";
 
             // -----------------------------------------------------------------------------------------
             // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
@@ -223,7 +223,7 @@
 &trans  &kp EXCL                    &kp AT                 &kp HASH                  &kp DLLR                  &kp PRCNT          &kp CARET  &kp AMPS                &kp LEFT_PARENTHESIS        &kp RIGHT_PARENTHESIS    &kp STAR              &trans
 &trans  &hm LEFT_SHIFT KP_NUMBER_1  &hm LCTRL KP_NUMBER_2  &hm LEFT_ALT KP_NUMBER_3  &hm LEFT_GUI KP_NUMBER_4  &kp KP_NUMBER_5    &kp MINUS  &hm RIGHT_GUI KP_EQUAL  &hm RIGHT_ALT LEFT_BRACKET  &hm RCTRL RIGHT_BRACKET  &hm RIGHT_SHIFT BSLH  &trans
 &trans  &kp KP_NUMBER_6             &kp KP_NUMBER_7        &kp KP_NUMBER_8           &kp KP_NUMBER_9           &kp KP_NUMBER_0    &kp UNDER  &kp PLUS                &kp LBRC                    &kp RBRC                 &kp PIPE              &trans
-                                                           &kp TILDE                 &mo 3                     &trans             &trans     &trans                  &trans
+                                                           &kp TILDE                 &trans                     &trans             &trans     &trans                  &trans
             >;
         };
 
