@@ -203,8 +203,8 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&none  &none           &none             &mmv MOVE_UP    &mmv MOVE_X -200  &mmv MOVE_X 200     &none           &kp RIGHT_GUI  &kp RIGHT_ALT  &kp RCTRL        &kp RIGHT_SHIFT  &trans
-&none  &none           &mmv MOVE_LEFT    &mmv MOVE_DOWN  &mmv MOVE_RIGHT   &mmv MOVE_Y -200    &kp LEFT_ARROW  &kp DOWN       &kp UP_ARROW   &kp RIGHT_ARROW  &none            &trans
+&none  &none           &none             &mmv MOVE_UP    &mmv MOVE_X (-200)  &mmv MOVE_X 200     &none           &kp RIGHT_GUI  &kp RIGHT_ALT  &kp RCTRL        &kp RIGHT_SHIFT  &trans
+&none  &none           &mmv MOVE_LEFT    &mmv MOVE_DOWN  &mmv MOVE_RIGHT   &mmv MOVE_Y (-200)    &kp LEFT_ARROW  &kp DOWN       &kp UP_ARROW   &kp RIGHT_ARROW  &none            &trans
 &none  &kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp RIGHT_ALT   &kp RIGHT_GUI     &mmv MOVE_Y 200     &mkp LCLK       &mkp RCLK      &none          &none            &trans           &trans
                                          &kp LEFT_SHIFT  &trans            &trans              &trans          &trans         &trans
             >;
