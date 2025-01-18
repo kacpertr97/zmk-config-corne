@@ -58,15 +58,6 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
         };
-
-        mscc: mscc {
-          compatible = "zmk,behavior-input-two-axis";
-          label = "SCROLL";
-          x-input-code = <INPUT_REL_X>;
-          y-input-code = <INPUT_REL_Y>;
-          time-to-max-speed-ms = <0>;
-          acceleration-exponent = <1>;
-        };
     };
 
     macros {
@@ -215,9 +206,9 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&none  &none           &none             &mmv MOVE_UP    &mscc SCRL_LEFT  &mscc SCRL_RIGHT     &none           &kp RIGHT_GUI  &kp RIGHT_ALT  &kp RCTRL        &kp RIGHT_SHIFT  &trans
-&none  &none           &mmv MOVE_LEFT    &mmv MOVE_DOWN  &mmv MOVE_RIGHT   &mscc SCRL_DOWN    &kp LEFT_ARROW  &kp DOWN       &kp UP_ARROW   &kp RIGHT_ARROW  &none            &trans
-&none  &kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp RIGHT_ALT   &kp RIGHT_GUI     &mscc SCRL_UP    &mkp LCLK       &mkp RCLK      &none          &none            &trans           &trans
+&none  &none           &none             &mmv MOVE_UP    &msc SCRL_LEFT  &msc SCRL_RIGHT     &none           &kp RIGHT_GUI  &kp RIGHT_ALT  &kp RCTRL        &kp RIGHT_SHIFT  &trans
+&none  &none           &mmv MOVE_LEFT    &mmv MOVE_DOWN  &mmv MOVE_RIGHT   &msc SCRL_DOWN    &kp LEFT_ARROW  &kp DOWN       &kp UP_ARROW   &kp RIGHT_ARROW  &none            &trans
+&none  &kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp RIGHT_ALT   &kp RIGHT_GUI     &msc SCRL_UP    &mkp LCLK       &mkp RCLK      &none          &none            &trans           &trans
                                          &kp LEFT_SHIFT  &trans            &trans              &trans          &trans         &trans
             >;
         };
