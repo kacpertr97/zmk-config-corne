@@ -72,7 +72,46 @@
 
     //
 
-    combos { compatible = "zmk,combos"; };
+    // Same combos as Temper. Key positions are shifted vs. Temper because the
+    // Corne has an extra outer column on each side (12 keys per row, not 10).
+    combos {
+        compatible = "zmk,combos";
+        combo_qmark {
+            timeout-ms = <50>;
+            key-positions = <7 8>;
+            bindings = <&kp QMARK>;
+        };
+        combo_tab {
+            timeout-ms = <50>;
+            key-positions = <27 28>;
+            bindings = <&kp TAB>;
+        };
+        combo_slash {
+            timeout-ms = <50>;
+            key-positions = <31 32>;
+            bindings = <&kp KP_SLASH>;
+        };
+        combo_grave {
+            timeout-ms = <50>;
+            key-positions = <31 32 33>;
+            bindings = <&kp GRAVE>;
+        };
+        combo_apos {
+            timeout-ms = <50>;
+            key-positions = <2 3 4>;
+            bindings = <&kp APOS>;
+        };
+        combo_tilde {
+            timeout-ms = <50>;
+            key-positions = <7 8 9>;
+            bindings = <&kp TILDE>;
+        };
+        combo_dqt {
+            timeout-ms = <50>;
+            key-positions = <3 4>;
+            bindings = <&kp DQT>;
+        };
+    };
 
     keymap {
         compatible = "zmk,keymap";
@@ -104,7 +143,7 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&none  &none           &none             &mmv MOVE_UP    &msc SCRL_RIGHT  &msc SCRL_LEFT    &none           &kp RIGHT_GUI  &kp RIGHT_ALT  &kp RCTRL        &kp RIGHT_SHIFT  &trans
+&none  &none           &none             &mmv MOVE_UP    &msc SCRL_RIGHT  &msc SCRL_LEFT    &mkp MB3        &kp RIGHT_GUI  &kp RIGHT_ALT  &kp RCTRL        &kp RIGHT_SHIFT  &trans
 &none  &none           &mmv MOVE_LEFT    &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_DOWN    &kp LEFT_ARROW  &kp DOWN       &kp UP_ARROW   &kp RIGHT_ARROW  &none            &trans
 &none  &kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp RIGHT_ALT   &kp RIGHT_GUI    &msc SCRL_UP      &mkp LCLK       &mkp RCLK      &none          &none            &trans           &trans
                                          &kp LEFT_SHIFT  &trans           &trans            &trans          &trans         &trans
@@ -132,8 +171,8 @@
             display-name = "System";
             bindings = <
 &trans  &kp F1        &kp F2        &kp F3        &kp F4      &kp F5            &kp F6  &kp F7  &kp F8  &kp F9  &kp F10      &trans
-&trans  &kp F11       &kp F12       &trans        &trans      &studio_unlock    &trans  &trans  &trans  &trans  &trans       &trans
-&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_CLR  &bt BT_CLR_ALL    &trans  &trans  &trans  &trans  &bootloader  &trans
+&trans  &kp F11       &kp F12       &bt BT_CLR    &bt BT_CLR_ALL  &studio_unlock    &trans  &trans  &trans  &trans  &trans       &trans
+&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &kp PG_UP     &trans            &trans  &kp PG_DN  &trans  &trans  &bootloader  &trans
                                     &trans        &trans      &trans            &trans  &trans  &trans
             >;
         };
